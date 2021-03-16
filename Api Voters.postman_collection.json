@@ -1,0 +1,821 @@
+{
+	"info": {
+		"_postman_id": "b12f83fc-4209-48de-a354-77a37d812001",
+		"name": "Api Voters",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"danielw\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				},
+				"description": "Request para inicio de sesión"
+			},
+			"response": []
+		},
+		{
+			"name": "getDepartments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/departments?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"departments"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s"
+						}
+					]
+				},
+				"description": "Obtener todos los departamentos\nSe debe enviar por url el token generado por el Login"
+			},
+			"response": []
+		},
+		{
+			"name": "getCitys",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/citys?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"citys"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s"
+						}
+					]
+				},
+				"description": "Obtener todas las ciudades\nSe debe enviar por url el token generado por el Login"
+			},
+			"response": []
+		},
+		{
+			"name": "getLeaders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/leaders?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"leaders"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s"
+						}
+					]
+				},
+				"description": "Obtener todos los lideres\nSe debe enviar por url el token generado por el Login"
+			},
+			"response": []
+		},
+		{
+			"name": "getPollingPlaces",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/polling_places?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"polling_places"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s"
+						}
+					]
+				},
+				"description": "Obtener todas los puestos de votacion\nSe debe enviar por url el token generado por el Login"
+			},
+			"response": []
+		},
+		{
+			"name": "getVoters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/voters?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"voters"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s"
+						}
+					]
+				},
+				"description": "Obtener todos los votantes\nSe debe enviar por url el token generado por el Login"
+			},
+			"response": []
+		},
+		{
+			"name": "getDepartmentsbyId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/departments/11?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"departments",
+						"11"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s"
+						}
+					]
+				},
+				"description": "Obtener departamento por id, el id debe ir despúes de departments/"
+			},
+			"response": []
+		},
+		{
+			"name": "getPollingPlacebyId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/polling_places/5?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"polling_places",
+						"5"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s"
+						}
+					]
+				},
+				"description": "Obtener puesto de votacion por id, el id debe ir despúes de polling_places/"
+			},
+			"response": []
+		},
+		{
+			"name": "getCitysbyId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/citys/11001?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"citys",
+						"11001"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s"
+						}
+					]
+				},
+				"description": "Obtener ciudad por id, el id debe ir despúes de citys/"
+			},
+			"response": []
+		},
+		{
+			"name": "getLeadersbyId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/leaders/2?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"leaders",
+						"2"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s"
+						}
+					]
+				},
+				"description": "Obtener lider por id, el id debe ir después de leaders/"
+			},
+			"response": []
+		},
+		{
+			"name": "insertDepartment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_department\": 101,\r\n    \"department\": \"Nuevo Depto\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/departments/add?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"departments",
+						"add"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s"
+						}
+					]
+				},
+				"description": "Ingresar un nuevo departamento"
+			},
+			"response": []
+		},
+		{
+			"name": "insertCity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_department\": 101,\r\n    \"id_city\": 101001,\r\n    \"city\": \"Nueva ciudad\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/citys/add?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"citys",
+						"add"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s"
+						}
+					]
+				},
+				"description": "Ingresar una ciudad"
+			},
+			"response": []
+		},
+		{
+			"name": "insertLeader",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_department\": 101,\r\n    \"department\": \"Nuevo Depto\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/departments/add?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"departments",
+						"add"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s"
+						}
+					]
+				},
+				"description": "Ingresar un lider"
+			},
+			"response": []
+		},
+		{
+			"name": "insertPollingPlace",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name_place\": \"Un lugar\",\r\n    \"id_city\": 11001,\r\n    \"address\": \"Cra 7 #156-80\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/polling_places/add?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"polling_places",
+						"add"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s"
+						}
+					]
+				},
+				"description": "Ingresar un puesto de votacion"
+			},
+			"response": []
+		},
+		{
+			"name": "insertLeader",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"names\": \"Sergio Daniel\",\r\n    \"last_names\": \"Wilches Gomez\",\r\n    \"document\": \"45968123\",\r\n    \"phone\": \"3114533169\",\r\n    \"address\": \"Cra 107a #76-23\",\r\n    \"id_city\": 11001\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/leaders/add?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"leaders",
+						"add"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s"
+						}
+					]
+				},
+				"description": "Ingresar un lider"
+			},
+			"response": []
+		},
+		{
+			"name": "insertVoter",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"names\": \"Sergio Daniel\",\r\n    \"last_names\": \"Wilches Gomez\",\r\n    \"document\": \"126438943\",\r\n    \"phone\": \"3114533169\",\r\n    \"address\": \"Cra 107a #76-23\",\r\n    \"id_city\": 11001,\r\n    \"id_place\": 6,\r\n    \"id_leader\": 3,\r\n    \"voting_table\": \"Mesa 8\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/voters/add?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"voters",
+						"add"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s"
+						}
+					]
+				},
+				"description": "Ingresar un votante"
+			},
+			"response": []
+		},
+		{
+			"name": "updateDepartment",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"department\": \"Actualización Depto\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/departments/update/101?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"departments",
+						"update",
+						"101"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s"
+						}
+					]
+				},
+				"description": "Actualizar un departamento\nEl id debe ir despúes de departments/"
+			},
+			"response": []
+		},
+		{
+			"name": "updateCity",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"city\": \"Actualización Ciudad\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/citys/update/101001?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"citys",
+						"update",
+						"101001"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s"
+						}
+					]
+				},
+				"description": "Actualizar ciudad\nEl id debe ir despúes de citys/"
+			},
+			"response": []
+		},
+		{
+			"name": "updateLeader",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\": \"Cra. 107a #76-23\",\r\n    \"document\": \"44235426423\",\r\n    \"id_city\": 11001,\r\n    \"last_names\": \"Wilches Gomez\",\r\n    \"names\": \"Sergio Daniel\",\r\n    \"phone\": \"31145331699\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/leaders/update/3?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"leaders",
+						"update",
+						"3"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s"
+						}
+					]
+				},
+				"description": "Actualizar lider\nEl id debe ir despúes de leaders/"
+			},
+			"response": []
+		},
+		{
+			"name": "updateVoter",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\": \"Cra. 107a #76-23\",\r\n    \"document\": \"65353653\",\r\n    \"id_city\": 11001,\r\n    \"last_names\": \"Wilches Gomez\",\r\n    \"names\": \"Sergio Daniel\",\r\n    \"phone\": \"31145331699\",\r\n    \"id_place\": 5,\r\n    \"voting_table\": \"Mesa 4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/voters/update/2?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"voters",
+						"update",
+						"2"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s"
+						}
+					]
+				},
+				"description": "Actualizar votante\nEl id debe ir despúes de voters/"
+			},
+			"response": []
+		},
+		{
+			"name": "updatePollingPlace",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\": \"Cra. 107a #76-23\",\r\n    \"name_place\": \"Corferias\",\r\n    \"id_city\": 11001,\r\n    \"id_place\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/polling_places/update/3?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"polling_places",
+						"update",
+						"3"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s"
+						}
+					]
+				},
+				"description": "Actualizar puesto de votacion\nEl id debe ir despúes de polling_places/"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteDepartment",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:3000/departments/delete/101?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"departments",
+						"delete",
+						"101"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s"
+						}
+					]
+				},
+				"description": "Eliminar departamento\nEl id debe ir despúes de departments/"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCity",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:3000/citys/delete/101001?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"citys",
+						"delete",
+						"101001"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s"
+						}
+					]
+				},
+				"description": "Eliminar ciudad\nEl id debe ir despúes de citys/"
+			},
+			"response": []
+		},
+		{
+			"name": "deletePollingPlace",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:3000/polling_places/delete/1?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"polling_places",
+						"delete",
+						"1"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s"
+						}
+					]
+				},
+				"description": "Eliminar departamento"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteLeaders",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:3000/leaders/delete/2?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"leaders",
+						"delete",
+						"2"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s"
+						}
+					]
+				},
+				"description": "Eliminar lider\nEl id debe ir despúes de leaders/"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteVoters",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:3000/voters/delete/2?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"voters",
+						"delete",
+						"2"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoyLCJleHAiOjE2MTU4OTQyOTd9.aw8dN7lyE6cKy28zon8YZ0G3M3M5fxkEUgQYM2wlh1s"
+						}
+					]
+				},
+				"description": "Eliminar votante\nEl id debe ir despúes de voters/"
+			},
+			"response": []
+		}
+	]
+}
