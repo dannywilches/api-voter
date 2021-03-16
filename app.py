@@ -7,6 +7,7 @@ from departments import *
 from polling_places import *
 from voters import *
 from leaders import *
+from reports import *
 from login import makeLogin
 import jwt
 import datetime
@@ -37,16 +38,6 @@ def token_required(f):
 
         return f(*args,**kwargs)
     return decorated
-
-# @app.route('/unprotected')
-# def unprotected():
-#     return jsonify({'message': 'Cualquiera puede acceder'})
-
-# @app.route('/protected')
-# @token_required
-# def protected():
-#     return jsonify({'message': 'Solo disponible a usuarios logeados'})
-
 
 def result_to_response(result):
     response = []
@@ -282,37 +273,12 @@ def delLeader(id_leader):
 
 # Functions Reports
 
-# @app.route('/login', methods=["GET"])
-# def showLeaders():
-#     if request.method == 'GET':
-#         response = getLeaders(mysql)
-#         return result_to_response(response)
-
-# @app.route('/leaders/<int:id_leader>', methods=["GET"])
-# def showLeaderbyId(id_leader):
-#     if request.method == 'GET':
-#         response = getLeaderbyId(mysql,id_leader)
-#         return result_to_response(response)
-
-# @app.route('/leaders/add', methods=["POST"])
-# def addLeader():
-#     if request.method == 'POST':
-#         data = request.get_json(force=True)
-#         response = insertLeader(mysql,data)
-#         return result_to_response(response)
-
-# @app.route('/leaders/update/<int:id_leader>', methods=["PUT"])
-# def updLeader(id_leader):
-#     if request.method == 'PUT':
-#         data = request.get_json(force=True)
-#         response = updateLeader(mysql,id_leader,data)
-#         return result_to_response(response)
-
-# @app.route('/leaders/delete/<int:id_leader>', methods=["DELETE"])
-# def delLeader(id_leader):
-#     if request.method == 'DELETE':
-#         response = deleteLeader(mysql,id_leader)
-#         return result_to_response(response)
+@app.route('/reports/<string:type_report>', methods=["GET"])
+def showReport(type_report):
+    if request.method == 'GET':
+        if type_report == "generalbyleader":
+            response = getReportGeneralbyLeader(mysql)
+        return result_to_response(response)
 
 if __name__ == "__main__":
     app.run(port= 3000, debug=True)

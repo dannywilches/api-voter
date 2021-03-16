@@ -7,9 +7,7 @@ def makeLogin(mysql,request):
                 WHERE username = %s and password = %s
                 """
         cur.execute(sql, (request['username'],request["password"]))
-        print("llego aca")
         # data = cur.fetchall()
-        print(cur.rowcount)
         if cur.rowcount > 0:
             data_login = cur.fetchone()
             response["code"] = 200
@@ -18,9 +16,7 @@ def makeLogin(mysql,request):
         else:
             response["code"] = 204
             response["login"] = False
-        print(response)
         cur.close()
         return response
     except:
-        print("Error getVoterbyId")
         return ({"code":409, "login": False})
